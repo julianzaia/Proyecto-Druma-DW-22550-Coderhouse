@@ -1,0 +1,532 @@
+
+    /* reset inicial*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*diseño responsive*/
+
+
+
+/* Intento de menu responsive*/
+.menu{
+    background-color: blueviolet;
+    background-image: linear-gradient(violet, rgb(32, 17, 32));
+    height: 75px;
+    width: 100vw;
+    display:flex;
+    justify-content: space space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    box-shadow: 5px 0 10px;
+
+}
+.logo{
+    padding: 0 60px 0 10px;
+    font-size: 30px;
+    font-style: bold;
+    color:cornsilk;
+    
+}
+
+.menuItems{
+    display:flex;
+    margin-right: 80px;
+}
+
+
+
+.menuItems li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menuItems li a{
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    display:block;
+    text-transform: uppercase;
+    color:cornsilk;
+}
+
+
+
+.menuItems li:hover,  li.active{
+    background-color: black;
+    transition: .9s;
+    
+}    
+.btn_menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color:darkgray;
+    cursor:pointer;
+    display: none;
+
+}
+
+ul.show {
+    top: 65px;
+
+}
+
+@media  screen and (max-width:500px) {
+    
+
+    
+    .logo {
+        font-size: 30px;
+        padding-left: 35px;
+       
+        
+
+    }
+
+    .menuItems li a {
+        font-size: 16px;
+        display:block;
+        
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .menu {
+        height: 65px;
+    }   
+
+    .btn_menu {
+        display:none;
+    }   
+    .menuItems{
+        position:fixed;
+        width:100vw;
+        height: calc(100% -65px);
+        background: #414141;
+        top: -100vh;
+        text-align: center;
+        transition:  all .4s;
+        flex-direction: column;
+    }
+    .menuItems li{
+        margin: 30px 0 0 0 ;
+        line-height: 30px ;
+    }
+    .menuItems li:hover{
+        background: none;
+        
+
+    }
+
+    .menuItems li a {
+        font-size: 20px;
+        color:rgb(160, 158, 158);
+        font-weight: bold;
+
+    }
+
+    .menu ul ul{
+        display:none
+
+    }
+
+}    
+
+}    
+/*fin del codigo de menu*/
+
+
+
+.GridContainerContacto{
+    display:grid;
+    width: 3fr;
+    grid-template-columns: 2fr;
+}
+
+
+
+/*style login */
+
+.grid-containerLogin{
+    display:grid;
+    width: 3fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat (2, 1fr);
+    gap: 10px 5px; 
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+}
+
+.box { 
+    width: 300px;
+    height: 70px;
+    padding: 10px auto;
+    font-size: 15px;
+    background-image: linear-gradient(black, darkgrey);
+    margin: 2px auto;
+    border: 2px solid yellow;
+    align-content:center;
+    color:cornsilk;
+    align-items: center;
+    
+
+}
+
+/*flexbox del index.html*/
+
+.flex-container1{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+    box-shadow: 1px 0 10px;
+    
+}
+
+
+.box1 { 
+    
+    width: 200px;
+    height:10vh;
+    padding: 10px auto;
+    font-size: 15px;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    margin: 2px auto;
+    border: 2px solid yellow;
+    align-content:center;
+    justify-content:stretch;
+    transition: height 2s;
+}
+.box1:hover{
+    height:60vh;
+    
+}
+
+
+.box2 { 
+    
+    width: 400px;
+    height:25vh;
+    display: flex;
+    padding: 10px auto;
+    font-size: 15px;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    transition: width 2s, height 3s;
+    margin: 2px auto;
+    border: 2px solid yellow;
+    align-content:center;
+    justify-content: center;
+}
+
+.box2:hover {
+    width:500px;
+    height:35vh;
+}
+
+.h1principal {
+    font-size: 30px;
+    
+    font-weight: bold;
+    display: block;
+    color: whitesmoke;
+    justify-content:center;
+    padding: 2px auto;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    animation-duration:3s;
+    animation-name: fadin;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity:3;
+    }
+}
+.video {
+    width: 100%;
+    height:100%;
+}
+
+
+#footerEstilo{
+    color:whitesmoke;
+    font-size: 15px;
+    display:flex;
+    align-self: stretch;
+}
+
+
+
+.Iam {
+    padding: 2em 5em;
+    font: normal 40px/50px Montserrat, sans-serif;
+    color: #999;
+  }
+  .Iam p {
+    height: 50px;
+    float: left;
+    margin-right: 0.3em;
+  }
+  .Iam b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 40px;
+  }
+  .Iam .innerIam {
+    display: inline-block;
+    color: yellow;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+  
+  
+  /*animation*/
+  -webkit-animation:move 5s;
+     -moz-animation:move 5s;
+      -ms-animation:move 5s;
+       -o-animation:move 5s;
+          animation:move 5s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count:infinite;
+     -moz-animation-iteration-count:infinite;
+      -ms-animation-iteration-count:infinite;
+       -o-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  /*animation-delay*/
+  -webkit-animation-delay:1s;
+     -moz-animation-delay:1s;
+      -ms-animation-delay:1s;
+       -o-animation-delay:1s;
+          animation-delay:1s;
+  }
+  @keyframes move{
+  0%  { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+  }
+  
+  @-webkit-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-moz-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-o-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+/*estilos de eventos.html*/
+
+.grid-containerEventos{
+    display:grid;
+    width: 3fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    align-items:stretch;
+}
+
+.box3 { 
+    
+    width: 100%;
+
+    display: flex;
+
+    padding: 20px 5px;
+    font-size: 30px;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    
+    margin: 6px auto;
+    border: 4px solid yellow;
+    align-content:center;
+    justify-content: center;
+}
+
+/* estilo recursos.html Seba, acá inserto la correción*/
+
+
+.Gridcontainervideos{
+    
+    
+    display:grid;
+    background-color: cornsilk;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content:space-between;
+    gap: 5px;
+
+}
+.Gridcontainervideos div{
+    background-color:grey;
+    border: 1px solid black;
+
+}
+
+.audioItem1{
+    grid-area: 1/1/3/5;
+    
+}
+
+.audioItem2{
+    grid-area: 3/1/3/2;
+}
+
+.audioItem3{
+    grid-area:3/2/3/3;
+}
+.audioItem4{
+    grid-area:3/3/3/4;
+}
+
+
+/* esto es el estilo del ejercicio de tablas
+
+.box4Tabla{
+    
+width: 700px;
+height:22vh;
+padding: 20px auto;
+font-size: 15px;
+background-color:darkgray;
+margin: 5px auto;
+border: 2px solid yellow;
+align-content:center;
+justify-content: center;
+    
+    }
+
+/*    
+/*   estilos fundamentos.html*/
+
+
+    
+
+
+header{
+    grid-area: header;
+    
+}
+main{
+    grid-area: main;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    
+
+}
+aside {
+    grid-area: aside;
+    background-color: blueviolet;
+
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+}        
+
+header, main, aside, footer{
+padding: 20px;
+display:flex;
+justify-content: center;
+align-items:center;
+justify-items: center;
+
+    
+}
+
+/*estilo de login.html*/
+
+
+.flex-container2{
+
+    width: 3fr;
+    height: 2fr;
+    display: flex;
+    justify-content:center;
+    background-image: linear-gradient(darkgray, rgb(190, 188, 188) );
+    flex-direction:column;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+    box-shadow: 1px 0 10px;
+    
+}
+
+
+
+
+
+.GridContainerFundamentos{
+    width: 3fr;
+    height: auto;
+    
+    display:grid;
+    background-color: cornsilk;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content:
+    gap: 5px;
+
+}
+}
+.GridContainerFundamentos div{
+    background-color:grey;
+    border: 1px solid black;
+
+}
+
+.FundItem1{
+    grid-area: 1/1/3/5;
+    
+}
+
+.FundItem2{
+    grid-area: 3/1/3/2;
+}
+
+.FundItem3{
+    grid-area:3/2/3/3;
+}
+.FundItem4{
+    grid-area:3/3/3/4;
+}
